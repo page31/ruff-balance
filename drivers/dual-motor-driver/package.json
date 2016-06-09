@@ -1,0 +1,7 @@
+{
+    "name": "dual-motor-driver",
+    "version": "0.1.0",
+    "description": "TB6612FNG dual motor driver",
+    "author": "huangdong",
+    "main": "src/index.js"
+}

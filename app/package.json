@@ -1,0 +1,14 @@
+{
+    "name": "hello-ruff",
+    "version": "0.1.0",
+    "description": "",
+    "author": "",
+    "main": "src/index.js",
+    "ruff": {
+        "dependencies": {
+            "ruff-mbd-v1": "^2.0.4",
+            "dual-motor-driver": "*",
+            "buzzer-gpio": "^0.1.2"
+        }
+    }
+}

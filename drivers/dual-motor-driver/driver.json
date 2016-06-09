@@ -1,0 +1,47 @@
+{
+    "models": ["TB6612FNG"],
+    "inputs": {
+        "pwm-a": {
+            "type": "pwm",
+            "args": {
+                "frequency": 500
+            }
+        },
+        "pwm-b": {
+            "type": "pwm",
+            "args": {
+                "frequency": 500
+            }
+        },
+        "ain-1": {
+            "type": "gpio",
+            "args": {
+                "direction": "out_high"
+            }
+        },
+        "ain-2": {
+            "type": "gpio",
+            "args": {
+                "direction": "out_high"
+            }
+        },
+        "bin-1": {
+            "type": "gpio",
+            "args": {
+                "direction": "out_high"
+            }
+        },
+        "bin-2": {
+            "type": "gpio",
+            "args": {
+                "direction": "out_high"
+            }
+        },
+         "stry": {
+            "type": "gpio",
+            "args": {
+                "direction": "out_high"
+            }
+        }
+    }
+}
