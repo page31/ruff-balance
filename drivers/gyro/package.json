@@ -1,0 +1,7 @@
+{
+    "name": "gyro",
+    "version": "0.1.0",
+    "description": "driver for MPU-6050",
+    "author": "huangdong",
+    "main": "src/index.js"
+}

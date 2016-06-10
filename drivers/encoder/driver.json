@@ -1,0 +1,21 @@
+{
+    "models": [
+        "generic"
+    ],
+    "inputs": {
+        "gpio-a": {
+            "type": "gpio",
+            "args": {
+                "direction": "in",
+                "edge": "both"
+            }
+        },
+        "gpio-b": {
+            "type": "gpio",
+            "args": {
+                "direction": "in",
+                "edge": "both"
+            }
+        }
+    }
+}

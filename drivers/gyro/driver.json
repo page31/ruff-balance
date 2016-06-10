@@ -1,0 +1,16 @@
+{
+    "models": [
+        "MPU-6050"
+    ],
+    "inputs": {
+        "i2c": {
+            "type": "i2c",
+            "args": {
+                "address": {
+                    "type": "number",
+                    "default": 104
+                }
+            }
+        }
+    }
+}

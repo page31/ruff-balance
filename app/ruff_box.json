@@ -517,22 +517,22 @@
             }
         },
         {
-            "id": "buzzer",
-            "model": "FC-49",
-            "driver": "buzzer-gpio",
+            "id": "gyro",
+            "model": "gyro",
+            "driver": "gyro",
             "inputs": {
-                "gpio": {
-                    "type": "gpio",
+                "i2c": {
+                    "type": "i2c",
                     "args": {
-                        "direction": "out_high"
+                        "address": 104
                     },
-                    "bind": "gpio-26/gpio"
+                    "bind": "i2c-0/i2c"
                 }
             }
         },
         {
             "id": "motor",
-            "model": "motor",
+            "model": "dual-motor-driver",
             "driver": "dual-motor-driver",
             "inputs": {
                 "pwm-a": {
@@ -583,6 +583,52 @@
                         "direction": "out_high"
                     },
                     "bind": "gpio-18/gpio"
+                }
+            }
+        },
+        {
+            "id": "wheel-encoder-a",
+            "model": "wheel-encoder-a",
+            "driver": "encoder",
+            "inputs": {
+                "gpio-a": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-26/gpio"
+                },
+                "gpio-b": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-plus/io-0"
+                }
+            }
+        },
+        {
+            "id": "wheel-encoder-b",
+            "model": "wheel-encoder-b",
+            "driver": "encoder",
+            "inputs": {
+                "gpio-a": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-plus/io-1"
+                },
+                "gpio-b": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    },
+                    "bind": "gpio-plus/io-2"
                 }
             }
         }

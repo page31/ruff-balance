@@ -3,7 +3,7 @@
     "devices": [
         {
             "id": "motor",
-            "model": "motor",
+            "model": "dual-motor-driver",
             "driver": "dual-motor-driver",
             "inputs": {
                 "pwm-a": {
@@ -51,14 +51,56 @@
             }
         },
         {
-            "id": "buzzer",
-            "model": "FC-49",
-            "driver": "buzzer-gpio",
+            "id": "gyro",
+            "model": "gyro",
+            "driver": "gyro",
             "inputs": {
-                "gpio": {
+                "i2c": {
+                    "type": "i2c",
+                    "args": {
+                        "address": 104
+                    }
+                }
+            }
+        },
+        {
+            "id": "wheel-encoder-a",
+            "model": "wheel-encoder-a",
+            "driver": "encoder",
+            "inputs": {
+                "gpio-a": {
                     "type": "gpio",
                     "args": {
-                        "direction": "out_high"
+                        "direction": "in",
+                        "edge": "both"
+                    }
+                },
+                "gpio-b": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    }
+                }
+            }
+        },
+        {
+            "id": "wheel-encoder-b",
+            "model": "wheel-encoder-b",
+            "driver": "encoder",
+            "inputs": {
+                "gpio-a": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
+                    }
+                },
+                "gpio-b": {
+                    "type": "gpio",
+                    "args": {
+                        "direction": "in",
+                        "edge": "both"
                     }
                 }
             }
